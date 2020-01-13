@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import Head from 'next/head'
+import axios from 'axios'
 import {Row, Col ,Affix, Icon ,Breadcrumb  } from 'antd'
 import ReactMarkdown from 'react-markdown'
 import MarkNav from 'markdown-navbar';
@@ -12,7 +13,10 @@ import Footer from '../components/Footer'
 import '../public/style/pages/detailed.css'
 
 
-export default function detailed() {
+export default function detailed(data) {
+    console.log('1232222222222222222'+data.data)
+    const [detail,setdetail] = useState(data.data)
+    console.log(detail)
     let markdown='## P01:课程介绍和环境搭建\n' +
     '[ **M** ] arkdown + E [ **ditor** ] = **Mditor**  \n' +
     '> Mditor 是一个简洁、易于集成、方便扩展、期望舒服的编写 markdown 的编辑器，仅此而已... \n\n' +
@@ -65,8 +69,9 @@ export default function detailed() {
                         </div>
 
                         <div>
+                            {/* <div>{detail}</div> */}
                             <div className="detailed-title">
-                                React实战
+                                {detail.title}
                             </div>
 
                             <div className="list-icon center">
@@ -106,4 +111,14 @@ export default function detailed() {
             <Footer/>
         </>
     )
+}
+detailed.getInitialProps = async(context)=>{
+    let {_id} = context.query
+    const promise = new Promise((resolve)=>{
+        axios('http://localhost:3100/blogList/blogDetail?_id='+_id).then(res=>{
+            console.log(res.data[0])
+            resolve({data:res.data[0]})
+          }) 
+    })
+    return await promise
 }

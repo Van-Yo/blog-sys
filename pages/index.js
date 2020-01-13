@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import axios from 'axios'
 import Head from 'next/head'
+import Link from 'next/link'
 import Header from '../components/Header'
 import Author from '../components/Author'
 import Advert from '../components/Advert'
@@ -8,7 +9,7 @@ import Footer from '../components/Footer'
 import {Row, Col , List ,Icon} from 'antd'
 import '../public/style/pages/index.css'
 const Home = (list) => {
-  console.log(list);
+  console.log(list.data);
   const [myList,setMyList] = useState(list.data)
   return(
     <>
@@ -24,10 +25,14 @@ const Home = (list) => {
             itemLayout="vertical"
             renderItem={item=>(
               <List.Item>
-                <div className="list-title">{item.title}</div>
+                <div className="list-title" >
+                  <Link href={{pathname:'/detailed',query:{_id:item._id}}}>
+                    <a>{item.title}</a>
+                  </Link>
+                </div>
                 <div className="list-icon">
                   <span><Icon type="calendar" /> {item.date}</span>
-                  <span><Icon type="folder" /> {item.category}</span>
+                  <span><Icon type="folder" /> {item.category===1?'博文':'生活'}</span>
                   <span><Icon type="fire" /> {item.hot}人</span>
                 </div>
                 <div className="list-context">{item.content}</div>
@@ -49,6 +54,7 @@ const Home = (list) => {
 Home.getInitialProps = async ()=>{
   const promise = new Promise((resolve)=>{
     axios('http://localhost:3100/blogList/getBlogList').then(res=>{
+      console.log(res.data)
       resolve({data:res.data})
     })
   })
