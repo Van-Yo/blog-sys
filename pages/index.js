@@ -10,7 +10,6 @@ import Advert from '../components/Advert'
 import Footer from '../components/Footer'
 import servicePath  from '../config/apiUrl'
 const Home = (list) => {
-  console.log(list.data);
   const [ mylist , setMylist ] = useState(list.data)
   return (
       <>
