@@ -1,5 +1,5 @@
 // let ipUrl = 'http://localhost:3300/'    // 测试环境
-let ipUrl = 'http://139.224.227.52:3300/'    // 生产环境
+let ipUrl = 'http://139.224.227.52:8087/api/'    // 生产环境
 
 let servicePath = {
     getBlogList:ipUrl + 'blogList/getBlogList' ,  //  首页文章列表接口
