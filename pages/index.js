@@ -14,7 +14,7 @@ const Home = (list) => {
   return (
       <>
         <Head>
-          <title>Home</title>
+          <title>疯狂程序猿-这是一个基于next.js的初级博客网站</title>
         </Head>
         <Header />
         <Row className="comm-main" type="flex" justify="center">
@@ -34,7 +34,7 @@ const Home = (list) => {
                           <div className="list-icon">
                           <span><Icon type="calendar" /> {item.date}</span>
                           <span><Icon type="folder" /> {item.category}</span>
-                          <span><Icon type="fire" /> 5498人</span>
+                          <span><Icon type="fire" /></span>
                           </div>
                           <div className="list-context">{item.brief}</div>  
                       </List.Item>
@@ -45,7 +45,7 @@ const Home = (list) => {
     
           <Col className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
             <Author />
-            <Advert />
+            {/* <Advert /> */}
           </Col>
         </Row>
         <Footer/>

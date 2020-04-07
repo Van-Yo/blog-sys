@@ -1,4 +1,4 @@
-import {Avatar,Divider} from 'antd'
+import {Avatar,Divider,Tooltip } from 'antd'
 import '../public/style/components/author.css'
 
 const Author =()=>{
@@ -10,9 +10,9 @@ const Author =()=>{
                 学无止境<br/>
                 Knowledge has no limit
                 <Divider>社交账号</Divider>
-                <Avatar size={28} icon="github" className="account"  />
-                <Avatar size={28} icon="qq"  className="account" />
-                <Avatar size={28} icon="wechat"  className="account"  />
+                <Tooltip  title="waiting..."><Avatar size={28} icon="github" className="account"  /></Tooltip>
+                <Tooltip  title="2269785643"><Avatar size={28} icon="qq"  className="account"/></Tooltip >
+                <Tooltip  title="waiting..."><Avatar size={28} icon="wechat"  className="account"  /></Tooltip >
 
             </div>
         </div>

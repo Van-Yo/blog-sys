@@ -68,7 +68,7 @@ const Detailed = (list) => {
                 <div className="list-icon center">
                   <span><Icon type="calendar" />{mylist.date}</span>
                   <span><Icon type="folder" />{mylist.category}</span>
-                  <span><Icon type="fire" /> 5498人</span>
+                  <span><Icon type="fire" /> </span>
                 </div>
 
                 <div className="detailed-content" dangerouslySetInnerHTML = {{__html:html}}>
@@ -82,7 +82,7 @@ const Detailed = (list) => {
 
         <Col className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
           <Author />
-          <Advert />
+          {/* <Advert /> */}
           <Affix offsetTop={5}>
             <div className="detailed-nav comm-box">
               <div className="nav-title">文章目录</div>

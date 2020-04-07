@@ -35,7 +35,7 @@ const Header = () => {
           <Row type="flex" justify="center">
               <Col xs={24} sm={24} md={10} lg={15} xl={12}>
                   <span className="header-logo"><a href="/">CrazyCoder</a></span>
-                  <span className="header-txt">Knowledge has no limit.</span>
+                  {/* <span className="header-txt">Knowledge has no limit.</span> */}
               </Col>
       
               <Col className="memu-div" xs={0} sm={0} md={14} lg={8} xl={6}>

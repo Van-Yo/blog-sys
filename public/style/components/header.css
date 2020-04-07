@@ -9,6 +9,7 @@
     color:#1e90ff;
     font-size: 1.4rem;
     text-align: left;
+    font-weight: 700;
 }
 .header-txt{
     font-size: 0.6rem;
@@ -27,4 +28,7 @@
 .ant-menu-horizontal{
     line-height: 43px !important;
     text-align: right;
+}
+.ant-menu-horizontal{
+    border-bottom: 0 !important;
 }
