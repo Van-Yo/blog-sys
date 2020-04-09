@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Head from 'next/head'
 import axios from 'axios'
-import {Row, Col ,Affix, Icon ,Breadcrumb  } from 'antd'
+import {Row, Col ,Affix, Icon ,Breadcrumb ,BackTop  } from 'antd'
 import MarkNav from 'markdown-navbar';
 import 'markdown-navbar/dist/navbar.css';
 import marked from 'marked'
@@ -92,7 +92,7 @@ const Detailed = (list) => {
         </Col>
       </Row>
       <Footer/>
-
+      <BackTop />
    </>
   )
 }

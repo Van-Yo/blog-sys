@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import Head from 'next/head'
 import axios from 'axios'
-import {Row, Col , List ,Icon ,Breadcrumb  } from 'antd'
+import {Row, Col , List ,Icon ,Breadcrumb ,BackTop } from 'antd'
 import Link from 'next/link'
 import '../public/style/pages/index.css'
 import Header from '../components/Header'
@@ -10,7 +10,6 @@ import Advert from '../components/Advert'
 import Footer from '../components/Footer'
 import servicePath  from '../config/apiUrl'
 const BlogList = ({query}) => {
-  console.log(query.id);
   const [ mylist , setMylist ] = useState([])
   useEffect(()=>{
       const fetchData = async ()=>{
@@ -66,6 +65,7 @@ const BlogList = ({query}) => {
           </Col>
         </Row>
         <Footer/>
+        <BackTop />
      </>
     )
 }
