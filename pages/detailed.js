@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Head from 'next/head'
 import axios from 'axios'
-import {Row, Col ,Affix, Icon ,Breadcrumb  } from 'antd'
+import {Row, Col ,Affix, Icon ,Breadcrumb ,BackTop  } from 'antd'
 import MarkNav from 'markdown-navbar';
 import 'markdown-navbar/dist/navbar.css';
 import marked from 'marked'
@@ -83,7 +83,7 @@ const Detailed = (list) => {
         <Col className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
           <Author />
           {/* <Advert /> */}
-          <Affix offsetTop={5}>
+          <Affix offsetTop={8}>
             <div className="detailed-nav comm-box">
               <div className="nav-title">文章目录</div>
               {tocify && tocify.render()}
@@ -92,7 +92,7 @@ const Detailed = (list) => {
         </Col>
       </Row>
       <Footer/>
-
+      <BackTop />
    </>
   )
 }

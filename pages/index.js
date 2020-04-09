@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Head from 'next/head'
 import axios from 'axios'
-import {Row, Col , List ,Icon} from 'antd'
+import {Row, Col , List ,Icon,BackTop} from 'antd'
 import Link from 'next/link'
 import '../public/style/pages/index.css'
 import Header from '../components/Header'
@@ -49,6 +49,7 @@ const Home = (list) => {
           </Col>
         </Row>
         <Footer/>
+        <BackTop />
      </>
     )
 }

@@ -1,5 +1,6 @@
 body{
   background-color: #f6f6f6;  
+  /* padding-top: 3.2rem; */
 }
 
 .comm-left{
@@ -14,6 +15,7 @@ body{
   padding:.3rem;
   border-radius: .3rem;
   border:1px solid #eee;
+  margin-bottom: 0.5rem;
 
 
 }
@@ -25,6 +27,7 @@ body{
   font-size:1.3rem;
   color: #1e90ff;
   padding: 0 0.5rem;
+  font-weight: 500;
 }
 .list-context{
   color:#777;
