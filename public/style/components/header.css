@@ -4,6 +4,10 @@
     overflow: hidden;
     height: 3.2rem;
     border-bottom:1px solid #eee;
+    /* position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0; */
 }
 .header-logo{
     color:#1e90ff;
@@ -31,4 +35,7 @@
 }
 .ant-menu-horizontal{
     border-bottom: 0 !important;
+}
+.memu-div li{
+    font-weight: 600 !important;
 }
