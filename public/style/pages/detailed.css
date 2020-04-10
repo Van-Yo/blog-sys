@@ -109,6 +109,6 @@ blockquote{
     margin-top: 1rem;
     -webkit-margin-bottom-collapse: 2rem;
 }
-p,li{
+.detailed-content p,.detailed-content li{
     line-height: 1.8rem
 }
