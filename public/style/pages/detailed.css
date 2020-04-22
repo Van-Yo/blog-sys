@@ -76,7 +76,7 @@ iframe{
     height: 34rem;
 }
 .detailed-content  img{
-    width: 4rem;
+    width: 100%;
     border:1px solid #f3f3f3;
 }
 .title-level3{
