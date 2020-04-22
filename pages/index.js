@@ -8,6 +8,7 @@ import Header from '../components/Header'
 import Author from '../components/Author'
 import Advert from '../components/Advert'
 import Footer from '../components/Footer'
+// import DateCs from '../components/DateCs'
 import servicePath  from '../config/apiUrl'
 const Home = (list) => {
   const [ mylist , setMylist ] = useState(list.data)
@@ -46,6 +47,7 @@ const Home = (list) => {
           <Col className="comm-right" xs={0} sm={0} md={7} lg={5} xl={4}>
             <Author />
             {/* <Advert /> */}
+            {/* <DateCs /> */}
           </Col>
         </Row>
         <Footer/>
