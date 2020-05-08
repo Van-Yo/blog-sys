@@ -24,7 +24,7 @@ const BlogList = ({query}) => {
   return (
       <>
         <Head>
-          <title>疯狂程序猿-这是一个基于next.js的初级博客网站</title>
+          <title>疯狂程序猿-{query.name}</title>
         </Head>
         <Header />
         <Row className="comm-main" type="flex" justify="center">
@@ -34,7 +34,7 @@ const BlogList = ({query}) => {
                   <div className="bread-div">
                     <Breadcrumb>
                       <Breadcrumb.Item><a href="/">首页</a></Breadcrumb.Item>
-                      <Breadcrumb.Item>视频列表</Breadcrumb.Item>
+                      <Breadcrumb.Item>{query.name}</Breadcrumb.Item>
                     </Breadcrumb>
                   </div>  
                   <List

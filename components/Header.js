@@ -25,7 +25,15 @@ const Header = () => {
         if(e.key==0){
             Router.push('/index')
         }else{
-            Router.push('/list?id='+e.key)
+            Router.push(
+                {
+                    pathname:'/list',
+                    query:{
+                        id:e.key,
+                        name:e.item.props.name
+                    }
+                }
+            )
         }
 
 
@@ -46,7 +54,7 @@ const Header = () => {
                     {
                         navArray.map((item)=>{
                         return(
-                            <Menu.Item key={item.id}>
+                            <Menu.Item key={item.id} name={item.name}>
                                 {item.name}
                             </Menu.Item>
                         )
